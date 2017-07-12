@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+# Files specific to this project
+tables.html
