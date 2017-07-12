@@ -1,8 +1,8 @@
 values = ['A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2']
 suits = ['s', 'o']
 
-htmlTableTemplate = '<table "class"="table" cellspacing="2" cellpadding="0">\n'
-htmlCellTemplate = "\t\t\t<td \"id\"=\"(id)\" onmouseover=\"return tableClick(this);\">(content)</td>\n"
+htmlTableTemplate = '<table><tbody>\n'
+htmlCellTemplate = "\t\t\t<td \"id\"=\"(id)\" onmouseover=\"return tableClick(this);\" onmousedown=\"return tableClick(this);\">(content)</td>\n"
 
 def main():
     matrix = generateMatrices()
@@ -54,7 +54,7 @@ def formatMatrix(template, matrix):
         output += '\t</tr>\n'
         y = y + 1
         x = 0
-    output += '</table>\n'
+    output += '</tbody></table>\n'
     return output
 
 main()

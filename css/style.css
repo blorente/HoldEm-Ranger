@@ -1,0 +1,24 @@
+table {
+    border: 2px solid #CCCCCC;
+    border-collapse: collapse;
+    width: 450px;
+    font-family: Cambria, Cochin, Georgia, serif;
+    font-size: 14px;
+    background-color: red;
+}
+
+table th {
+    font-weight: bold;
+    font-size: 16px;
+    background-color: green;
+}
+
+table td {
+    width: 2em;
+    text-align: center;
+    background-color: white;
+    padding: 0.4em 0px;
+    -moz-box-shadow: inset 0 -1px 7px -1px #000000;
+    -webkit-box-shadow: inset 0 -1px 7px -1px #000000;
+    box-shadow: inset 0 -1px 7px -1px #000000;
+}
