@@ -1,4 +1,6 @@
 const {ipcRenderer} = require('electron')
+const {dialog} = require('electron').remote
+const fs = require('fs')
 
 let mousedown = 0;
 function tableClick(elem) {
@@ -8,6 +10,40 @@ function tableClick(elem) {
   }
   elem.style.background = color;
   return false;
+}
+
+
+function openFolder() {
+  dialog.showOpenDialog({
+      title:"Select a folder",
+      properties: ["openDirectory"]
+  }, (folderPaths) => {
+      // folderPaths is an array that contains all the selected paths
+      if(folderPaths === undefined){
+          console.log("No destination folder selected");
+          return;
+      }else{
+          console.log(folderPaths);
+          fs.readdir(folderPaths[0], function (err, list) {
+            // For every file in the list
+            list.forEach(function (file) {
+              // Full path of that file
+              let path = folderPaths + "/" + file;
+              // Get the file's stats
+              fs.stat(path, function (err, stat) {
+                console.log(stat);
+                // If the file is a directory
+                if (stat && stat.isDirectory())
+                  // Dive into the directory
+                  dive(path, action);
+                else
+                  // Call the action
+                  addRecent(path);
+              });
+            });
+          });
+      }
+  });
 }
 
 function save() {

@@ -15,7 +15,7 @@ function createWindow () {
     protocol: 'file:',
     slashes: true
   }))
-  win.setMenu(null)
+  //win.setMenu(null)
 
   win.on('closed', () => {
     win = null

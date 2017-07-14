@@ -35,3 +35,7 @@ table td {
   justify-content:center;
   align-items:center;
 }
+
+.open-folder-icon {
+  margin: 0.5em;
+}
