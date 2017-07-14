@@ -74,7 +74,6 @@ let refreshTable = function (range) {
 let recentTemplate = `<li class="list-group-item">
   <div  id=(id) class="media-body" onclick="loadRecent(this)">
     <strong>(title)</strong>
-    <p>(path)</p>
   </div>
 </li>`
 
@@ -82,8 +81,7 @@ let addRecent = function (path) {
   let list = document.getElementById('recent-ranges');
   let fileTitle = path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.'));
   let template = recentTemplate.replace('(title)', fileTitle);
-  template = template.replace('(path)', path);
-  template = template.replace('(id)', path)
+  template = template.replace('(id)', path);
   list.innerHTML += template;
 }
 

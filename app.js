@@ -8,14 +8,14 @@ const ranges = require('./ranges.js')
 let win
 
 function createWindow () {
-  win = new BrowserWindow({width: 630, height: 450})
+  win = new BrowserWindow({width: 700, height: 450})
 
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
   }))
-  //win.setMenu(null)
+  win.setMenu(null)
 
   win.on('closed', () => {
     win = null
