@@ -8,7 +8,7 @@ let currentRange = {
 }
 let selectedColor = 1;
 
-module.exports.loadRange = function(callback) {
+module.exports.loadOpen = function(callback) {
   // Open file
   let loaded = false;
   let res = false;
@@ -20,18 +20,26 @@ module.exports.loadRange = function(callback) {
         return;
     }
 
-    fs.readFile(fileNames[0], 'utf-8', (err, data) => {
-        if(err){
-            console.error("An error ocurred reading the file :" + err.message);
-            res = false;
-            return;
-        }
-
-        currentRange = JSON.parse(data);
-        callback(currentRange);
-        return;
-    });
+    module.exports.loadFromPath(fileNames[0], callback, false);
     return;
+  });
+};
+
+module.exports.loadRecent = function (path, callback) {
+  module.exports.loadFromPath(path, callback, true);
+};
+
+module.exports.loadFromPath = function (path, callback, recent) {
+  fs.readFile(path, 'utf-8', (err, data) => {
+      if(err){
+          console.error("An error ocurred reading the file :" + err.message);
+          res = false;
+          return;
+      }
+
+      currentRange = JSON.parse(data);
+      callback(path, currentRange, recent);
+      return;
   });
 };
 

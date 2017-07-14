@@ -42,14 +42,17 @@ ipcMain.on('synchronous-message', (event, arg) => {
   } else if (arg.type === 'save') {
     ranges.saveRange();
     event.returnValue = true;
-  } else if (arg.type === 'load') {
-    ranges.loadRange(doneLoading);
+  } else if (arg.type === 'load-open') {
+    ranges.loadOpen(doneLoading);
+    event.returnValue = true;
+  } else if (arg.type === 'load-recent') {
+    ranges.loadRecent(arg.path, doneLoading);
     event.returnValue = true;
   }
   return true;
 })
 
-let doneLoading = function (range) {
+let doneLoading = function (path, range, recent) {
   console.log("Done loading");
-  win.webContents.send('load', range);
+  win.webContents.send('load', {range: range, file: path, recent: recent});
 };

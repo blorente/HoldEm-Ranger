@@ -4,14 +4,17 @@
         <title></title>
          <link rel="stylesheet" href="thirdparty/photon-0.1.2-dist/css/photon.min.css">
          <link rel="stylesheet" href="css/style.css">
-         <script src="index.js"></script>
     </head>
     <body onmouseup="mousedown=0;return false;" onmousedown="mousedown=1; return false;">
       <div class="window">
       <div class="window-content">
         <div class="pane-group">
           <div class="pane-sm sidebar">
-
+            <ul id="recent-ranges" class="list-group">
+              <li class="list-group-header">
+                <div><strong>Recent ranges: </strong></div>
+              </li>
+            </ul>
           </div>
           <div class="pane">
             <table><tbody>
@@ -217,5 +220,8 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="index.js">
+
+    </script>
     </body>
 </html>
