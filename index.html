@@ -5,221 +5,244 @@
          <link rel="stylesheet" href="thirdparty/photon-0.1.2-dist/css/photon.min.css">
          <link rel="stylesheet" href="css/style.css">
     </head>
-    <body onmouseup="mousedown=0;" onmousedown="mousedown=1;">
+    <body onmouseup="mousedown=0;return false;" onmousedown="mousedown=1; return false;">
       <div class="window">
       <div class="window-content">
         <div class="pane-group">
-          <div class="pane-sm sidebar">...</div>
+          <div class="pane-sm sidebar">
+            <button class="btn btn-large btn-default" onclick="save()">Save</button>
+            <button class="btn btn-large btn-default" onclick="load()">Load</button>
+          </div>
           <div class="pane">
             <table><tbody>
             	<tr>
-            			<td "id"="0-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AA</td>
-            			<td "id"="1-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AKs</td>
-            			<td "id"="2-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AQs</td>
-            			<td "id"="3-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AJs</td>
-            			<td "id"="4-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">ATs</td>
-            			<td "id"="5-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A9s</td>
-            			<td "id"="6-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A8s</td>
-            			<td "id"="7-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A7s</td>
-            			<td "id"="8-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A6s</td>
-            			<td "id"="9-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A5s</td>
-            			<td "id"="10-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A4s</td>
-            			<td "id"="11-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A3s</td>
-            			<td "id"="12-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A2s</td>
+            			<td id="0-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AA</td>
+            			<td id="1-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AKs</td>
+            			<td id="2-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AQs</td>
+            			<td id="3-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AJs</td>
+            			<td id="4-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">ATs</td>
+            			<td id="5-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A9s</td>
+            			<td id="6-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A8s</td>
+            			<td id="7-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A7s</td>
+            			<td id="8-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A6s</td>
+            			<td id="9-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A5s</td>
+            			<td id="10-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A4s</td>
+            			<td id="11-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A3s</td>
+            			<td id="12-0" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A2s</td>
             	</tr>
             	<tr>
-            			<td "id"="0-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AKo</td>
-            			<td "id"="1-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KK</td>
-            			<td "id"="2-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KQs</td>
-            			<td "id"="3-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KJs</td>
-            			<td "id"="4-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KTs</td>
-            			<td "id"="5-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K9s</td>
-            			<td "id"="6-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K8s</td>
-            			<td "id"="7-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K7s</td>
-            			<td "id"="8-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K6s</td>
-            			<td "id"="9-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K5s</td>
-            			<td "id"="10-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K4s</td>
-            			<td "id"="11-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K3s</td>
-            			<td "id"="12-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K2s</td>
+            			<td id="0-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AKo</td>
+            			<td id="1-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KK</td>
+            			<td id="2-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KQs</td>
+            			<td id="3-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KJs</td>
+            			<td id="4-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KTs</td>
+            			<td id="5-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K9s</td>
+            			<td id="6-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K8s</td>
+            			<td id="7-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K7s</td>
+            			<td id="8-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K6s</td>
+            			<td id="9-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K5s</td>
+            			<td id="10-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K4s</td>
+            			<td id="11-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K3s</td>
+            			<td id="12-1" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K2s</td>
             	</tr>
             	<tr>
-            			<td "id"="0-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AQo</td>
-            			<td "id"="1-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KQo</td>
-            			<td "id"="2-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">QQ</td>
-            			<td "id"="3-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">QJs</td>
-            			<td "id"="4-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">QTs</td>
-            			<td "id"="5-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q9s</td>
-            			<td "id"="6-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q8s</td>
-            			<td "id"="7-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q7s</td>
-            			<td "id"="8-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q6s</td>
-            			<td "id"="9-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q5s</td>
-            			<td "id"="10-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q4s</td>
-            			<td "id"="11-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q3s</td>
-            			<td "id"="12-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q2s</td>
+            			<td id="0-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AQo</td>
+            			<td id="1-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KQo</td>
+            			<td id="2-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">QQ</td>
+            			<td id="3-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">QJs</td>
+            			<td id="4-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">QTs</td>
+            			<td id="5-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q9s</td>
+            			<td id="6-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q8s</td>
+            			<td id="7-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q7s</td>
+            			<td id="8-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q6s</td>
+            			<td id="9-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q5s</td>
+            			<td id="10-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q4s</td>
+            			<td id="11-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q3s</td>
+            			<td id="12-2" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q2s</td>
             	</tr>
             	<tr>
-            			<td "id"="0-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AJo</td>
-            			<td "id"="1-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KJo</td>
-            			<td "id"="2-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">QJo</td>
-            			<td "id"="3-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">JJ</td>
-            			<td "id"="4-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">JTs</td>
-            			<td "id"="5-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J9s</td>
-            			<td "id"="6-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J8s</td>
-            			<td "id"="7-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J7s</td>
-            			<td "id"="8-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J6s</td>
-            			<td "id"="9-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J5s</td>
-            			<td "id"="10-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J4s</td>
-            			<td "id"="11-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J3s</td>
-            			<td "id"="12-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J2s</td>
+            			<td id="0-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">AJo</td>
+            			<td id="1-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KJo</td>
+            			<td id="2-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">QJo</td>
+            			<td id="3-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">JJ</td>
+            			<td id="4-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">JTs</td>
+            			<td id="5-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J9s</td>
+            			<td id="6-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J8s</td>
+            			<td id="7-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J7s</td>
+            			<td id="8-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J6s</td>
+            			<td id="9-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J5s</td>
+            			<td id="10-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J4s</td>
+            			<td id="11-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J3s</td>
+            			<td id="12-3" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J2s</td>
             	</tr>
             	<tr>
-            			<td "id"="0-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">ATo</td>
-            			<td "id"="1-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KTo</td>
-            			<td "id"="2-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">QTo</td>
-            			<td "id"="3-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">JTo</td>
-            			<td "id"="4-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">TT</td>
-            			<td "id"="5-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T9s</td>
-            			<td "id"="6-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T8s</td>
-            			<td "id"="7-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T7s</td>
-            			<td "id"="8-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T6s</td>
-            			<td "id"="9-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T5s</td>
-            			<td "id"="10-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T4s</td>
-            			<td "id"="11-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T3s</td>
-            			<td "id"="12-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T2s</td>
+            			<td id="0-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">ATo</td>
+            			<td id="1-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">KTo</td>
+            			<td id="2-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">QTo</td>
+            			<td id="3-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">JTo</td>
+            			<td id="4-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">TT</td>
+            			<td id="5-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T9s</td>
+            			<td id="6-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T8s</td>
+            			<td id="7-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T7s</td>
+            			<td id="8-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T6s</td>
+            			<td id="9-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T5s</td>
+            			<td id="10-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T4s</td>
+            			<td id="11-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T3s</td>
+            			<td id="12-4" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T2s</td>
             	</tr>
             	<tr>
-            			<td "id"="0-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A9o</td>
-            			<td "id"="1-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K9o</td>
-            			<td "id"="2-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q9o</td>
-            			<td "id"="3-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J9o</td>
-            			<td "id"="4-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T9o</td>
-            			<td "id"="5-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">99</td>
-            			<td "id"="6-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">98s</td>
-            			<td "id"="7-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">97s</td>
-            			<td "id"="8-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">96s</td>
-            			<td "id"="9-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">95s</td>
-            			<td "id"="10-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">94s</td>
-            			<td "id"="11-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">93s</td>
-            			<td "id"="12-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">92s</td>
+            			<td id="0-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A9o</td>
+            			<td id="1-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K9o</td>
+            			<td id="2-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q9o</td>
+            			<td id="3-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J9o</td>
+            			<td id="4-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T9o</td>
+            			<td id="5-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">99</td>
+            			<td id="6-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">98s</td>
+            			<td id="7-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">97s</td>
+            			<td id="8-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">96s</td>
+            			<td id="9-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">95s</td>
+            			<td id="10-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">94s</td>
+            			<td id="11-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">93s</td>
+            			<td id="12-5" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">92s</td>
             	</tr>
             	<tr>
-            			<td "id"="0-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A8o</td>
-            			<td "id"="1-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K8o</td>
-            			<td "id"="2-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q8o</td>
-            			<td "id"="3-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J8o</td>
-            			<td "id"="4-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T8o</td>
-            			<td "id"="5-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">98o</td>
-            			<td "id"="6-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">88</td>
-            			<td "id"="7-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">87s</td>
-            			<td "id"="8-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">86s</td>
-            			<td "id"="9-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">85s</td>
-            			<td "id"="10-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">84s</td>
-            			<td "id"="11-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">83s</td>
-            			<td "id"="12-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">82s</td>
+            			<td id="0-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A8o</td>
+            			<td id="1-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K8o</td>
+            			<td id="2-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q8o</td>
+            			<td id="3-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J8o</td>
+            			<td id="4-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T8o</td>
+            			<td id="5-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">98o</td>
+            			<td id="6-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">88</td>
+            			<td id="7-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">87s</td>
+            			<td id="8-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">86s</td>
+            			<td id="9-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">85s</td>
+            			<td id="10-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">84s</td>
+            			<td id="11-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">83s</td>
+            			<td id="12-6" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">82s</td>
             	</tr>
             	<tr>
-            			<td "id"="0-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A7o</td>
-            			<td "id"="1-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K7o</td>
-            			<td "id"="2-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q7o</td>
-            			<td "id"="3-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J7o</td>
-            			<td "id"="4-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T7o</td>
-            			<td "id"="5-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">97o</td>
-            			<td "id"="6-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">87o</td>
-            			<td "id"="7-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">77</td>
-            			<td "id"="8-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">76s</td>
-            			<td "id"="9-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">75s</td>
-            			<td "id"="10-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">74s</td>
-            			<td "id"="11-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">73s</td>
-            			<td "id"="12-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">72s</td>
+            			<td id="0-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A7o</td>
+            			<td id="1-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K7o</td>
+            			<td id="2-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q7o</td>
+            			<td id="3-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J7o</td>
+            			<td id="4-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T7o</td>
+            			<td id="5-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">97o</td>
+            			<td id="6-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">87o</td>
+            			<td id="7-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">77</td>
+            			<td id="8-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">76s</td>
+            			<td id="9-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">75s</td>
+            			<td id="10-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">74s</td>
+            			<td id="11-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">73s</td>
+            			<td id="12-7" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">72s</td>
             	</tr>
             	<tr>
-            			<td "id"="0-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A6o</td>
-            			<td "id"="1-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K6o</td>
-            			<td "id"="2-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q6o</td>
-            			<td "id"="3-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J6o</td>
-            			<td "id"="4-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T6o</td>
-            			<td "id"="5-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">96o</td>
-            			<td "id"="6-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">86o</td>
-            			<td "id"="7-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">76o</td>
-            			<td "id"="8-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">66</td>
-            			<td "id"="9-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">65s</td>
-            			<td "id"="10-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">64s</td>
-            			<td "id"="11-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">63s</td>
-            			<td "id"="12-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">62s</td>
+            			<td id="0-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A6o</td>
+            			<td id="1-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K6o</td>
+            			<td id="2-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q6o</td>
+            			<td id="3-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J6o</td>
+            			<td id="4-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T6o</td>
+            			<td id="5-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">96o</td>
+            			<td id="6-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">86o</td>
+            			<td id="7-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">76o</td>
+            			<td id="8-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">66</td>
+            			<td id="9-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">65s</td>
+            			<td id="10-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">64s</td>
+            			<td id="11-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">63s</td>
+            			<td id="12-8" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">62s</td>
             	</tr>
             	<tr>
-            			<td "id"="0-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A5o</td>
-            			<td "id"="1-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K5o</td>
-            			<td "id"="2-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q5o</td>
-            			<td "id"="3-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J5o</td>
-            			<td "id"="4-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T5o</td>
-            			<td "id"="5-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">95o</td>
-            			<td "id"="6-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">85o</td>
-            			<td "id"="7-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">75o</td>
-            			<td "id"="8-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">65o</td>
-            			<td "id"="9-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">55</td>
-            			<td "id"="10-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">54s</td>
-            			<td "id"="11-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">53s</td>
-            			<td "id"="12-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">52s</td>
+            			<td id="0-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A5o</td>
+            			<td id="1-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K5o</td>
+            			<td id="2-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q5o</td>
+            			<td id="3-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J5o</td>
+            			<td id="4-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T5o</td>
+            			<td id="5-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">95o</td>
+            			<td id="6-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">85o</td>
+            			<td id="7-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">75o</td>
+            			<td id="8-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">65o</td>
+            			<td id="9-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">55</td>
+            			<td id="10-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">54s</td>
+            			<td id="11-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">53s</td>
+            			<td id="12-9" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">52s</td>
             	</tr>
             	<tr>
-            			<td "id"="0-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A4o</td>
-            			<td "id"="1-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K4o</td>
-            			<td "id"="2-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q4o</td>
-            			<td "id"="3-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J4o</td>
-            			<td "id"="4-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T4o</td>
-            			<td "id"="5-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">94o</td>
-            			<td "id"="6-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">84o</td>
-            			<td "id"="7-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">74o</td>
-            			<td "id"="8-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">64o</td>
-            			<td "id"="9-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">54o</td>
-            			<td "id"="10-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">44</td>
-            			<td "id"="11-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">43s</td>
-            			<td "id"="12-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">42s</td>
+            			<td id="0-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A4o</td>
+            			<td id="1-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K4o</td>
+            			<td id="2-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q4o</td>
+            			<td id="3-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J4o</td>
+            			<td id="4-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T4o</td>
+            			<td id="5-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">94o</td>
+            			<td id="6-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">84o</td>
+            			<td id="7-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">74o</td>
+            			<td id="8-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">64o</td>
+            			<td id="9-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">54o</td>
+            			<td id="10-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">44</td>
+            			<td id="11-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">43s</td>
+            			<td id="12-10" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">42s</td>
             	</tr>
             	<tr>
-            			<td "id"="0-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A3o</td>
-            			<td "id"="1-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K3o</td>
-            			<td "id"="2-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q3o</td>
-            			<td "id"="3-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J3o</td>
-            			<td "id"="4-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T3o</td>
-            			<td "id"="5-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">93o</td>
-            			<td "id"="6-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">83o</td>
-            			<td "id"="7-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">73o</td>
-            			<td "id"="8-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">63o</td>
-            			<td "id"="9-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">53o</td>
-            			<td "id"="10-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">43o</td>
-            			<td "id"="11-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">33</td>
-            			<td "id"="12-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">32s</td>
+            			<td id="0-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A3o</td>
+            			<td id="1-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K3o</td>
+            			<td id="2-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q3o</td>
+            			<td id="3-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J3o</td>
+            			<td id="4-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T3o</td>
+            			<td id="5-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">93o</td>
+            			<td id="6-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">83o</td>
+            			<td id="7-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">73o</td>
+            			<td id="8-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">63o</td>
+            			<td id="9-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">53o</td>
+            			<td id="10-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">43o</td>
+            			<td id="11-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">33</td>
+            			<td id="12-11" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">32s</td>
             	</tr>
             	<tr>
-            			<td "id"="0-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A2o</td>
-            			<td "id"="1-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K2o</td>
-            			<td "id"="2-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q2o</td>
-            			<td "id"="3-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J2o</td>
-            			<td "id"="4-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T2o</td>
-            			<td "id"="5-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">92o</td>
-            			<td "id"="6-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">82o</td>
-            			<td "id"="7-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">72o</td>
-            			<td "id"="8-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">62o</td>
-            			<td "id"="9-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">52o</td>
-            			<td "id"="10-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">42o</td>
-            			<td "id"="11-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">32o</td>
-            			<td "id"="12-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">22</td>
+            			<td id="0-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">A2o</td>
+            			<td id="1-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">K2o</td>
+            			<td id="2-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">Q2o</td>
+            			<td id="3-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">J2o</td>
+            			<td id="4-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">T2o</td>
+            			<td id="5-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">92o</td>
+            			<td id="6-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">82o</td>
+            			<td id="7-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">72o</td>
+            			<td id="8-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">62o</td>
+            			<td id="9-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">52o</td>
+            			<td id="10-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">42o</td>
+            			<td id="11-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">32o</td>
+            			<td id="12-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">22</td>
             	</tr>
             </tbody></table>
+
+
           </div>
         </div>
       </div>
     </div>
 
     <script>
+    const {ipcRenderer} = require('electron')
+
     let mousedown = 0;
     function tableClick(elem) {
+      let color = elem.style.background;
       if (mousedown === 1) {
-        elem.style.background = 'cyan';
+        color = ipcRenderer.sendSync('synchronous-message', {type: 'select', hand: elem.id});
       }
+      elem.style.background = color;
       return false;
+    }
+
+    function save() {
+      ipcRenderer.sendSync('synchronous-message', {type: 'save'});
+    }
+
+    function load() {
+      range = ipcRenderer.sendSync('synchronous-message', {type: 'load'});
+      for (let col = 0; col < range.hands[0].length; col++) {
+        for (let row = 0; row < range.hands[0].length; row++) {
+          let elem = document.getElementById(col + '-' + row);
+          elem.style.background = range.colors[range.hands[col][row]];
+        }
+      }
     }
     </script>
     </body>

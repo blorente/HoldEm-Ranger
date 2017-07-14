@@ -2,7 +2,7 @@ values = ['A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2']
 suits = ['s', 'o']
 
 htmlTableTemplate = '<table><tbody>\n'
-htmlCellTemplate = "\t\t\t<td \"id\"=\"(id)\" onmouseover=\"return tableClick(this);\" onmousedown=\"return tableClick(this);\">(content)</td>\n"
+htmlCellTemplate = "\t\t\t<td id=\"(id)\" onmouseover=\"return tableClick(this);\" onmousedown=\"return tableClick(this);\">(content)</td>\n"
 
 def main():
     matrix = generateMatrices()
