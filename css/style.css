@@ -3,22 +3,35 @@ table {
     border-collapse: collapse;
     width: 450px;
     font-family: Cambria, Cochin, Georgia, serif;
-    font-size: 14px;
-    background-color: red;
+    font-size: 13px;
+    margin: 1em 1em 1em 1em;
 }
 
 table th {
     font-weight: bold;
     font-size: 16px;
-    background-color: green;
 }
 
 table td {
-    width: 2em;
+    width: 1.7em;
+    height; 1.7em;
     text-align: center;
     background-color: white;
-    padding: 0.4em 0px;
+    padding: 0.35em 0px;
+    margin: 0em;
     -moz-box-shadow: inset 0 -1px 7px -1px #000000;
     -webkit-box-shadow: inset 0 -1px 7px -1px #000000;
     box-shadow: inset 0 -1px 7px -1px #000000;
+}
+
+#range-table {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#control-buttons {
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
