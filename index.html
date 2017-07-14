@@ -4,14 +4,14 @@
         <title></title>
          <link rel="stylesheet" href="thirdparty/photon-0.1.2-dist/css/photon.min.css">
          <link rel="stylesheet" href="css/style.css">
+         <script src="index.js"></script>
     </head>
     <body onmouseup="mousedown=0;return false;" onmousedown="mousedown=1; return false;">
       <div class="window">
       <div class="window-content">
         <div class="pane-group">
           <div class="pane-sm sidebar">
-            <button class="btn btn-large btn-default" onclick="save()">Save</button>
-            <button class="btn btn-large btn-default" onclick="load()">Load</button>
+
           </div>
           <div class="pane">
             <table><tbody>
@@ -211,39 +211,11 @@
             			<td id="12-12" onmouseover="return tableClick(this);" onmousedown="return tableClick(this);">22</td>
             	</tr>
             </tbody></table>
-
-
+            <button class="btn btn-large btn-default" onclick="save()">Save</button>
+            <button class="btn btn-large btn-default" onclick="load()">Load</button>
           </div>
         </div>
       </div>
     </div>
-
-    <script>
-    const {ipcRenderer} = require('electron')
-
-    let mousedown = 0;
-    function tableClick(elem) {
-      let color = elem.style.background;
-      if (mousedown === 1) {
-        color = ipcRenderer.sendSync('synchronous-message', {type: 'select', hand: elem.id});
-      }
-      elem.style.background = color;
-      return false;
-    }
-
-    function save() {
-      ipcRenderer.sendSync('synchronous-message', {type: 'save'});
-    }
-
-    function load() {
-      range = ipcRenderer.sendSync('synchronous-message', {type: 'load'});
-      for (let col = 0; col < range.hands[0].length; col++) {
-        for (let row = 0; row < range.hands[0].length; row++) {
-          let elem = document.getElementById(col + '-' + row);
-          elem.style.background = range.colors[range.hands[col][row]];
-        }
-      }
-    }
-    </script>
     </body>
 </html>

@@ -1,4 +1,5 @@
-const {dialog} = require('electron');
+const {dialog, ipcMain} = require('electron');
+const app = require('./app.js');
 const fs = require('fs'); // Load the File System to execute our common tasks (CRUD)
 
 let currentRange = {
@@ -7,29 +8,31 @@ let currentRange = {
 }
 let selectedColor = 1;
 
-module.exports.loadRange = function() {
+module.exports.loadRange = function(callback) {
   // Open file
+  let loaded = false;
   let res = false;
   dialog.showOpenDialog((fileNames) => {
     // fileNames is an array that contains all the selected
     if(fileNames === undefined){
         console.log("No file selected");
         res = false;
+        return;
     }
 
     fs.readFile(fileNames[0], 'utf-8', (err, data) => {
         if(err){
             console.error("An error ocurred reading the file :" + err.message);
             res = false;
+            return;
         }
 
-        // Change how to handle the file content
-        console.log("The file content is : " + data);
         currentRange = JSON.parse(data);
-        res = true;
+        callback(currentRange);
+        return;
     });
+    return;
   });
-  return currentRange;
 };
 
 module.exports.saveRange = function() {
@@ -39,6 +42,7 @@ module.exports.saveRange = function() {
       if (fileName === undefined){
           console.log("You didn't save the file");
           res = false;
+          return;
       }
       fileName += '.rng'
       // fileName is a string that contains the path and filename created in the save file dialog.
@@ -46,9 +50,11 @@ module.exports.saveRange = function() {
           if(err){
               console.error("An error ocurred creating the file "+ err.message)
               res = false;
+              return;
           }
           console.log("The file has been succesfully saved");
           res = true;
+          return;
       });
   });
   return res;
@@ -59,7 +65,6 @@ module.exports.selectHand = function(tableid) {
   let row = Number(tableid.substring(tableid.search('-') + 1));
   console.log(`Selected hand (${col}, ${row})`);
   currentRange.hands[col][row] = selectedColor;
-  console.log(`Range after selection: ` + currentRange.hands);
   return currentRange.colors[selectedColor];
 };
 

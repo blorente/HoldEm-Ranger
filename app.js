@@ -43,7 +43,13 @@ ipcMain.on('synchronous-message', (event, arg) => {
     ranges.saveRange();
     event.returnValue = true;
   } else if (arg.type === 'load') {
-    event.returnValue = ranges.loadRange();
+    ranges.loadRange(doneLoading);
+    event.returnValue = true;
   }
   return true;
 })
+
+let doneLoading = function (range) {
+  console.log("Done loading");
+  win.webContents.send('load', range);
+};
