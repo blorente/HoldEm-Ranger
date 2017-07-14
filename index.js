@@ -7,6 +7,7 @@ function tableClick(elem) {
   let color = elem.style.background;
   if (mousedown === 1) {
     color = ipcRenderer.sendSync('synchronous-message', {type: 'select', hand: elem.id});
+  } else {
   }
   elem.style.background = color;
   return false;
