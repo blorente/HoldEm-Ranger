@@ -4,7 +4,6 @@ table {
     width: 450px;
     font-family: Cambria, Cochin, Georgia, serif;
     font-size: 13px;
-    margin: 1em 1em 1em 1em;
 }
 
 table th {
@@ -38,6 +37,7 @@ sidebar {
   display:flex;
   justify-content:center;
   align-items:center;
+  margin: 1em 1em 1em 1em;
 }
 
 .control-button {
@@ -53,4 +53,12 @@ sidebar {
   width: 1.3em;
   height: 1.3em;
   border: 2px solid;
+}
+
+.range-title {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size: 20px;
+  margin: 1em 1em 1em 1em;
 }

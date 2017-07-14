@@ -51,7 +51,9 @@ module.exports.saveRange = function() {
           res = false;
           return;
       }
-      fileName += '.rng'
+      if (fileName.search('.rng') == -1) {
+        fileName += '.rng'
+      }
       // fileName is a string that contains the path and filename created in the save file dialog.
       fs.writeFile(fileName, content, (err) => {
           if(err){

@@ -87,8 +87,10 @@ ipcRenderer.on('refresh-table', (event, arg) => {
 })
 
 ipcRenderer.on('load', (event, arg) => {
-  console.log('Load range');
   refreshTable(arg.range);
+  let fileTitle = arg.file.substring(arg.file.lastIndexOf('/') + 1, arg.file.lastIndexOf('.'));
+  fileTitle = fileTitle.replace(/_/g, ' ')
+  document.getElementById('range-title').innerHTML = fileTitle;
   if (!arg.recent) {addRecent(arg.file)};
 });
 
@@ -101,8 +103,8 @@ let refreshTable = function (range) {
   }
 }
 
-let recentTemplate = `<li class="list-group-item">
-  <div  id=(id) class="media-body" onclick="loadRecent(this)">
+let recentTemplate = `<li class="list-group-item" id=(id) onclick="loadRecent(this)">
+  <div class="media-body">
     <strong>(title)</strong>
   </div>
 </li>`
@@ -110,6 +112,7 @@ let recentTemplate = `<li class="list-group-item">
 let addRecent = function (path) {
   let list = document.getElementById('recent-ranges');
   let fileTitle = path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.'));
+  fileTitle = fileTitle.replace(/_/g, ' ')
   let template = recentTemplate.replace('(title)', fileTitle);
   template = template.replace('(id)', path);
   list.innerHTML += template;

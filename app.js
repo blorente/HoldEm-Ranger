@@ -8,7 +8,7 @@ const ranges = require('./ranges.js')
 let win
 
 function createWindow () {
-  win = new BrowserWindow({width: 670, height: 440})
+  win = new BrowserWindow({width: 750, height: 600})
 
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
