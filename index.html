@@ -220,6 +220,22 @@
               </tbody></table>
             </div>
             <div id="control-buttons">
+              <!-- Large button group -->
+              <div class="btn-group" id="colors">
+                <button onclick="changeColor(0)" class="btn btn-large btn-default">
+                  <div class="color-square" style="background-color: white"></div>
+                </button>
+                <button onclick="changeColor(1)" class="btn btn-large btn-default">
+                  <div class="color-square" style="background-color: cyan"></div>
+                </button>
+                <button onclick="changeColor(2)" class="btn btn-large btn-default">
+                    <div class="color-square" style="background-color: #ed8e12"></div>
+                </button>
+                <button onclick="changeColor(3)" class="btn btn-large btn-default">
+                    <div class="color-square" style="background-color: magenta"></div>
+                </button>
+              </div>
+
               <button class="btn btn-large btn-default control-button" onclick="save()"><strong>Save</strong></button>
               <button class="btn btn-large btn-default control-button" onclick="load()"><strong>Load</strong></button>
               <button class="btn btn-large btn-default control-button" onclick="clearRanges()"><strong>Clear</strong></button>

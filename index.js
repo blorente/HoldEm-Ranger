@@ -62,6 +62,25 @@ function load() {
   return true;
 }
 
+function changeColor(color) {
+  ipcRenderer.sendSync('synchronous-message', {type: 'change-color', color: color});
+  let colors = document.getElementById('colors');
+  let children = colors.childNodes;
+  let btns = 0;
+  for (let i = 0; i < children.length; i++) {
+    console.log(children[i]);
+    if (children[i].type == 'submit') {
+      children[i].classList.remove('active')
+      if (btns === color) {
+        children[i].className += ' active';
+        btns = children.length;
+      }
+      btns = btns + 1;
+    }
+  }
+  return true;
+}
+
 ipcRenderer.on('refresh-table', (event, arg) => {
   refreshTable(arg.range);
   return;

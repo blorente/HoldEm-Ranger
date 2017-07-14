@@ -15,7 +15,7 @@ function createWindow () {
     protocol: 'file:',
     slashes: true
   }))
-  win.setMenu(null)
+  //win.setMenu(null)
 
   win.on('closed', () => {
     win = null
@@ -53,6 +53,9 @@ ipcMain.on('synchronous-message', (event, arg) => {
     let range = ranges.clearRange();
     console.log('refresh table with range: ' + range.hands);
     win.webContents.send('refresh-table', {range: range});
+    event.returnValue = true;
+  } else if (arg.type === 'change-color') {
+    ranges.changeColor(arg.color);
     event.returnValue = true;
   }
   return true;

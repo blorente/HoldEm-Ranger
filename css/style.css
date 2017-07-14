@@ -48,3 +48,9 @@ sidebar {
 .open-folder-icon {
   margin: 0.5em;
 }
+
+.color-square {
+  width: 1.3em;
+  height: 1.3em;
+  border: 2px solid;
+}

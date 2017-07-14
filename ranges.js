@@ -4,9 +4,9 @@ const fs = require('fs'); // Load the File System to execute our common tasks (C
 
 let currentRange = {
   hands: emptyHands(),
-  colors: ['white', 'cyan']
+  colors: ['white', 'cyan', '#ed8e12', 'magenta']
 }
-let selectedColor = 1;
+let selectedColor = 2;
 
 module.exports.loadOpen = function(callback) {
   // Open file
@@ -87,4 +87,8 @@ function emptyHands() {
 module.exports.clearRange = function () {
   currentRange.hands = emptyHands();
   return currentRange;
+};
+
+module.exports.changeColor = function (color) {
+  selectedColor = color;
 };
