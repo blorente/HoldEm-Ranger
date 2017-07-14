@@ -46,6 +46,11 @@ function openFolder() {
   });
 }
 
+function clearRanges() {
+  ipcRenderer.sendSync('synchronous-message', {type: 'clear'});
+  return true;
+}
+
 function save() {
   ipcRenderer.sendSync('synchronous-message', {type: 'save'});
   return true;
@@ -55,6 +60,11 @@ function load() {
   ipcRenderer.sendSync('synchronous-message', {type: 'load-open'});
   return true;
 }
+
+ipcRenderer.on('refresh-table', (event, arg) => {
+  refreshTable(arg.range);
+  return;
+})
 
 ipcRenderer.on('load', (event, arg) => {
   console.log('Load range');

@@ -40,6 +40,11 @@ sidebar {
   align-items:center;
 }
 
+.control-button {
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+
 .open-folder-icon {
   margin: 0.5em;
 }

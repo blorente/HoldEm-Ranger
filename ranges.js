@@ -36,7 +36,6 @@ module.exports.loadFromPath = function (path, callback, recent) {
           res = false;
           return;
       }
-
       currentRange = JSON.parse(data);
       callback(path, currentRange, recent);
       return;
@@ -84,3 +83,8 @@ function emptyHands() {
   console.log(hands);
   return hands;
 }
+
+module.exports.clearRange = function () {
+  currentRange.hands = emptyHands();
+  return currentRange;
+};

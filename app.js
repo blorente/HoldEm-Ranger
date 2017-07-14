@@ -8,7 +8,7 @@ const ranges = require('./ranges.js')
 let win
 
 function createWindow () {
-  win = new BrowserWindow({width: 700, height: 450})
+  win = new BrowserWindow({width: 670, height: 440})
 
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
@@ -48,6 +48,11 @@ ipcMain.on('synchronous-message', (event, arg) => {
     event.returnValue = true;
   } else if (arg.type === 'load-recent') {
     ranges.loadRecent(arg.path, doneLoading);
+    event.returnValue = true;
+  } else if (arg.type === 'clear') {
+    let range = ranges.clearRange();
+    console.log('refresh table with range: ' + range.hands);
+    win.webContents.send('refresh-table', {range: range});
     event.returnValue = true;
   }
   return true;
