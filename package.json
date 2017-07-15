@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "build --dir",
+    "dist": "build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,33 @@
   "homepage": "https://github.com/blorente/ranger#readme",
   "devDependencies": {
     "electron": "~1.6.2",
-    "jquery": "^3.2.1"
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "HoldEm-Ranger",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
   }
 }

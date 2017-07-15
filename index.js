@@ -103,7 +103,7 @@ let refreshTable = function (range) {
   }
 }
 
-let recentTemplate = `<li class="list-group-item" id=(id) onclick="loadRecent(this)">
+let recentTemplate = `<li class="list-group-item" id="(id)" onclick="loadRecent(this)">
   <div class="media-body">
     <strong>(title)</strong>
   </div>
