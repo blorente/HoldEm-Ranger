@@ -15,8 +15,8 @@ function createWindow () {
     protocol: 'file:',
     slashes: true
   }))
-  //win.setMenu(null)
-  win.webContents.openDevTools()
+  win.setMenu(null)
+  //win.webContents.openDevTools()
 
   win.on('closed', () => {
     win = null
