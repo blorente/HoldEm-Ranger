@@ -16,7 +16,10 @@
   "keywords": [
     "poker"
   ],
-  "author": "Borja Lorente Escobar",
+  "author": {
+    "name": "Borja Lorente Escobar",
+    "email": "blorente.me@gmail.com"
+  },
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/blorente/ranger/issues"

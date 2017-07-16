@@ -34,6 +34,7 @@ function openFolder() {
               fs.stat(path, function (err, stat) {
                 console.log(stat);
                 // If the file is a directory
+                clearRecents()
                 if (stat && stat.isDirectory())
                   // Dive into the directory
                   dive(path, action);
