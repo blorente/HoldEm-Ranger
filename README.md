@@ -17,7 +17,7 @@ Here's a demonstration:
 
 ## What it does not (and doesn't intend to)
 
-- No equity calculations (we have (Equilab)[https://www.pokerstrategy.com/poker-software-tools/equilab-holdem/] for that)
+- No equity calculations (we have [Equilab](https://www.pokerstrategy.com/poker-software-tools/equilab-holdem/) for that)
 - No tracking.
 
 # For the Geeks
